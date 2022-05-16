@@ -225,18 +225,19 @@ body {
 }
 
 .topbar .navbar-search {
-	width: 25rem
+	width: 25rem;
+	margin-left: -30px;
 }
 
 .topbar .navbar-search input {
-	font-size: .85rem
+	font-size: .85rem;
 }
 
 .topbar .topbar-divider {
 	width: 0;
 	border-right: 1px solid #e3e6f0;
 	height: calc(4.375rem - 2rem);
-	margin: auto 1rem
+	margin: auto 1rem;
 }
 
 .topbar .nav-item .nav-link {
@@ -1072,12 +1073,12 @@ body {
 
 .chart-area {
 	position: relative;
-	height: 10rem;
+	height: auto;
 	width: 100%
 }
 
 .ht-card {
-	height: 185px;
+	height: auto;
 }
 
 .dropitem-users {
@@ -1695,7 +1696,10 @@ button.btn.btn-primary.search-btn {
 	background-color: transparent !important;
 	border-color: transparent !important;
 	box-shadow: none !important;
-	-webkit-box-shadow: none !important
+	-webkit-box-shadow: none !important;
+	position: relative;
+    left: 20px;
+    top: -2px;
 }
 
 .stats,
@@ -1706,6 +1710,13 @@ button.btn.btn-primary.search-btn {
 .profile-name {
 	color: #4D4F5C !important;
 	font-size: 18px !important;
+	font-weight: 500 !important;
+}
+.myprofile,
+.billing,
+.logout {
+	color: #4D4F5C !important;
+	font-size: 16px !important;
 	font-weight: 500 !important;
 }
 
@@ -1727,13 +1738,17 @@ button.btn.btn-primary.search-btn {
 }
 
 #chart {
-  max-width: 650px;
-  margin: 35px auto;
+  max-width: 100%;
+  margin: 10px auto;
 }
 
 .more-vert-icon {
 	position: relative;
-	top: -17px;
+	top: -24px;
+}
+.vert-icon {
+    position: relative;
+    top: 0px;
 }
 
 .profileImage {
@@ -1756,12 +1771,37 @@ a.dropdown-toggle.btn.btn-primary.select-stats.btn-sm {
 	font-size: 14px !important;
 	box-shadow: none !important;
 }
+.dropdown-item:focus, .dropdown-item:hover {
+	background-color: #f0f3f1 !important;
+}
 
 .wrap {
 	position: relative;
 	width: 100%;
 	margin: 0 auto;
 }
+#area-chart,
+#donut-chart {
+	max-width: 100%;
+	margin: 10px auto;
+}
+
+text#SvgjsText1485 {
+    position: relative;
+    font-size: 14px;
+}
+i.fa.fa-circle {
+    font-size: 4px;
+    color: #81E37A;
+    position: relative;
+    top: -10px;
+    left: -10px;
+}
+span.d-none.d-lg-inline.text-secondary.small.profileUpdate {
+    position: relative;
+    left: -8px;
+}
+
 
 /* The outer-div to move the elements */
 .box-video {
@@ -1807,7 +1847,7 @@ a.dropdown-toggle.btn.btn-primary.select-stats.btn-sm {
 	display: inline-block;
 	width: 60px;
 	height: 60px;
-	background: rgba(255, 255, 255, 0.1);
+	background: #fff;
 	-webkit-backdrop-filter: blur(10px);
 	border-radius: 50%;
 	text-indent: -999em;
@@ -1819,18 +1859,18 @@ a.dropdown-toggle.btn.btn-primary.select-stats.btn-sm {
 
 /* The Play-Triangle */
 .box-video .bt-play:after {
-	content: '';
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	height: 0;
-	width: 0;
-	margin: -12px 0 0 -6px;
-	border: solid transparent;
-	border-left-color: #000;
-	border-width: 12px 20px;
-	-webkit-transition: all .3s ease-out;
-	transition: all .3s ease-out;
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 0;
+    width: 0;
+    margin: -12px 0 0 -8px;
+    border: solid transparent;
+    border-left-color: #CBD0D5;
+    border-width: 12px 20px;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
 }
 
 .box-video:hover .bt-play {
