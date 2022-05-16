@@ -1726,6 +1726,11 @@ button.btn.btn-primary.search-btn {
 	cursor: pointer;
 }
 
+#chart {
+  max-width: 650px;
+  margin: 35px auto;
+}
+
 .more-vert-icon {
 	position: relative;
 	top: -17px;
