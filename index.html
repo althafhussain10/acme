@@ -183,7 +183,8 @@
                                  </div>
                                  <div class="card-body">
                                     <div class="chart-area">
-                                       <canvas id="myAreaChart"></canvas>
+                                       <div id="chart"></div>
+
                                     </div>
                                  </div>
                               </div>
@@ -352,6 +353,30 @@
       <script src="js/bootstrap.bundle.js"></script>
       <script src="js/jquery.easing.min.js"></script>
       <script src="js/ruang-admin.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
       <script src="js/scripts.js"></script>
+      <script type="text/javascript">
+         // Sales Distribution Donut Chart
+var options = {
+          series: [44, 55, 41, 17, 15],
+          chart: {
+          type: 'donut',
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+      </script>
    </body>
 </html>
