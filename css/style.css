@@ -381,8 +381,9 @@ body {
 	display: block;
 	width: 100%;
 	text-align: left;
-	padding: 1rem;
-	width: 14rem
+	padding: 1rem 1rem 0.9rem 1rem;
+	width: 14rem;
+	margin-bottom: 1rem;
 }
 
 .sidebar .nav-item .nav-link i {
@@ -655,12 +656,34 @@ body {
 }
 
 .login-form {
-	padding: 3rem !important
+	padding: 3rem !important;
+}
+
+@media(max-width: 991px) {
+	img.img-fluid.arrow-icon {
+		display: none;
+	}
 }
 
 @media (max-width:768px) {
 	#container-wrapper {
 		min-width: 100vw
+	}
+
+	span.badge.badge-danger.float-right.badgeNew {
+		margin-right: 15px;
+	}
+
+	.sidebar {
+		width: 28rem !important;
+	}
+
+	.search-btn img {
+		width: 54px !important;
+	}
+
+	button.btn.btn-primary.search-btn {
+		left: 0 !important;
 	}
 
 	input.form-control.bg-light.border-0.small {
@@ -673,7 +696,7 @@ body {
 	}
 
 	.sidebar.toggled {
-		width: 100vw !important;
+		width: 400vw !important;
 		transition: all .3s ease-in-out;
 		-webkit-transition: all .3s ease-in-out;
 		display: block !important;
@@ -687,10 +710,11 @@ body {
 
 	.sidebar.toggled .nav-item .nav-link {
 		display: block;
-		width: 100%;
+		width: 100% !important;
 		text-align: left;
 		padding: 1rem;
-		width: 14rem
+		width: 14rem;
+		margin-left: 15px;
 	}
 
 	.sidebar.toggled .nav-item .nav-link i {
@@ -898,23 +922,29 @@ body {
 .sidebar-light .nav-item .nav-link:active,
 .sidebar-light .nav-item .nav-link:focus,
 .sidebar-light .nav-item .nav-link:hover {
-	color: #6e707e;
+	color: #fff;
 	background: #3c3b54 !important;
 }
 
-.sidebar-light .nav-item .nav-link:active i,
-.sidebar-light .nav-item .nav-link:focus i,
-.sidebar-light .nav-item .nav-link:hover i {
-	color: #6e707e
+.sidebar-light .nav-item .nav-link:active svg,
+.sidebar-light .nav-item .nav-link:focus svg,
+.sidebar-light .nav-item .nav-link:hover svg {
+	fill: #AAA7FB !important;
+}
+
+.sidebar-light .nav-item .nav-link:hover svg#dashboard-icon g,
+.sidebar-light .nav-item .nav-link:hover svg#product-icon g {
+	stroke: #AAA7FB !important;
 }
 
 .sidebar-light .nav-item .nav-link[data-toggle=collapse]::after {
-	color: #b7b9cc
+	color: #b7b9cc;
 }
 
 .sidebar-light .nav-item.active .nav-link {
 	color: #FFFFFF;
 	background: #3c3b54;
+	border-left: 3px solid #A3A0FB;
 }
 
 .sidebar-light .nav-item.active .nav-link i {
@@ -1698,8 +1728,8 @@ button.btn.btn-primary.search-btn {
 	box-shadow: none !important;
 	-webkit-box-shadow: none !important;
 	position: relative;
-    left: 20px;
-    top: -2px;
+	left: 20px;
+	top: -2px;
 }
 
 .stats,
@@ -1712,12 +1742,27 @@ button.btn.btn-primary.search-btn {
 	font-size: 18px !important;
 	font-weight: 500 !important;
 }
+
 .myprofile,
 .billing,
 .logout {
 	color: #4D4F5C !important;
 	font-size: 16px !important;
 	font-weight: 500 !important;
+}
+
+.notic,
+.mbl {
+	position: absolute;
+	right: 15px;
+}
+
+.mbl {
+	margin-top: 3px;
+}
+
+.show-more-notic {
+	color: #3B86FF !important;
 }
 
 .table .thead-light th {
@@ -1738,17 +1783,18 @@ button.btn.btn-primary.search-btn {
 }
 
 #chart {
-  max-width: 100%;
-  margin: 10px auto;
+	max-width: 100%;
+	margin: 10px auto;
 }
 
 .more-vert-icon {
 	position: relative;
 	top: -24px;
 }
+
 .vert-icon {
-    position: relative;
-    top: 0px;
+	position: relative;
+	top: 0px;
 }
 
 .profileImage {
@@ -1758,10 +1804,21 @@ button.btn.btn-primary.search-btn {
 	left: 15px;
 }
 
-.country-name {
+.country-name,
+.mobile-number {
 	font-size: 14px !important;
 	opacity: 0.5;
 	color: #4D4F5C !important;
+}
+
+.notic-para {
+	font-size: 14px !important;
+	opacity: 1;
+	color: #4D4F5C !important;
+}
+
+.mt_30 {
+	margin-top: -30px !important;
 }
 
 a.dropdown-toggle.btn.btn-primary.select-stats.btn-sm {
@@ -1771,7 +1828,9 @@ a.dropdown-toggle.btn.btn-primary.select-stats.btn-sm {
 	font-size: 14px !important;
 	box-shadow: none !important;
 }
-.dropdown-item:focus, .dropdown-item:hover {
+
+.dropdown-item:focus,
+.dropdown-item:hover {
 	background-color: #f0f3f1 !important;
 }
 
@@ -1780,6 +1839,7 @@ a.dropdown-toggle.btn.btn-primary.select-stats.btn-sm {
 	width: 100%;
 	margin: 0 auto;
 }
+
 #area-chart,
 #donut-chart {
 	max-width: 100%;
@@ -1787,19 +1847,21 @@ a.dropdown-toggle.btn.btn-primary.select-stats.btn-sm {
 }
 
 text#SvgjsText1485 {
-    position: relative;
-    font-size: 14px;
+	position: relative;
+	font-size: 14px;
 }
+
 i.fa.fa-circle {
-    font-size: 4px;
-    color: #81E37A;
-    position: relative;
-    top: -10px;
-    left: -10px;
+	font-size: 4px;
+	color: #81E37A;
+	position: relative;
+	top: -10px;
+	left: -10px;
 }
+
 span.d-none.d-lg-inline.text-secondary.small.profileUpdate {
-    position: relative;
-    left: -8px;
+	position: relative;
+	left: -8px;
 }
 
 
@@ -1859,18 +1921,18 @@ span.d-none.d-lg-inline.text-secondary.small.profileUpdate {
 
 /* The Play-Triangle */
 .box-video .bt-play:after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    height: 0;
-    width: 0;
-    margin: -12px 0 0 -8px;
-    border: solid transparent;
-    border-left-color: #CBD0D5;
-    border-width: 12px 20px;
-    -webkit-transition: all .3s ease-out;
-    transition: all .3s ease-out;
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 0;
+	width: 0;
+	margin: -12px 0 0 -8px;
+	border: solid transparent;
+	border-left-color: #CBD0D5;
+	border-width: 12px 20px;
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
 }
 
 .box-video:hover .bt-play {
@@ -1909,4 +1971,67 @@ span.d-none.d-lg-inline.text-secondary.small.profileUpdate {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+i.fa.fa-plus {
+	font-size: 14px;
+	background: #514DDC;
+	padding: 5px;
+	border-radius: 50px;
+	position: relative;
+	left: 4px;
+	font-weight: 600 !important;
+}
+
+.badgeNew {
+	font-size: 12px !important;
+	position: relative;
+	top: 3px;
+}
+
+.social-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+i.fa.fa-align-left.text-secondary {
+	color: #646477 !important;
+}
+
+svg#home-icon,
+svg#dashboard-icon,
+svg#inbox-icon,
+svg#product-icon,
+svg#admin-icon {
+	width: 24px;
+	height: 24px;
+	fill: #fff;
+}
+
+svg#dashboard-icon {
+	position: relative;
+	left: -2px;
+}
+
+@media(max-width: 1099px) {
+
+	.mbl,
+	.country-name {
+		font-size: 10px !important;
+	}
+
+	.mbl {
+		margin-top: 6px !important;
+	}
+}
+
+@media(max-width: 480px) and (min-width: 380px) {
+	.search-btn img {
+		width: 24px !important;
+	}
+
+	.topbar .navbar-search {
+		margin-left: unset !important;
+	}
 }
