@@ -55,7 +55,8 @@
                <!-- TopBar -->
                <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
                   <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
-                  <i class="fa fa-bars text-secondary"></i>
+                  <!-- <i class="fa fa-bars text-secondary"></i> -->
+                  <img src="images/menubar.png" class="img-fluid" alt="menubar">
                   </button>
                   <ul class="navbar-nav mr-auto sm-search">
                      <li class="nav-item dropdown no-arrow">
@@ -63,7 +64,7 @@
                            <div class="input-group">
                               <div class="input-group-append">
                                  <button class="btn btn-primary search-btn" type="button">
-                                 <i class="fas fa-search fa-sm"></i>
+                                 <img src="images/search.png" alt="search" class="img-fluid">
                                  </button>
                               </div>
                               <input type="text" class="form-control bg-light border-0 small" placeholder="Search transactions, invoices or help"
@@ -76,8 +77,10 @@
                      <li class="nav-item dropdown no-arrow mx-1">
                         <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-bell fa-fw text-secondary"></i>
-                        <span class="badge badge-success badge-counter">2</span>
+                        <img src="images/bell.png" class="img-fluid" alt="bell">
+                        <span class="circle">
+                           <i class="fa fa-circle" aria-hidden="true"></i>
+                        </span>
                         </a>
                         <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                            aria-labelledby="alertsDropdown">
@@ -114,27 +117,28 @@
                                  <span class="lead country-name">Added a new comment on Sales task</span>
                               </div>
                            </a>
-                           <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                           <a class="dropdown-item text-center small text-gray-500" href="#">Show More</a>
                         </div>
                      </li>
                      <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
-                        <span class="d-none d-lg-inline text-secondary small">John Doe</span>
+                        <span class="d-none d-lg-inline text-secondary small profileUpdate">John Doe</span>
+                        <img src="images/arrowicon.png" class="img-fluid" alt="arrowicon">
                         <img class="img-profile rounded-circle" src="images/profile-pic-01.jpg" style="max-width: 60px">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                            <a class="dropdown-item" href="#">
-                           <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                           My Profile
+                           <img src="images/myprofile.png" class="img-fluid" alt="myprofile">
+                           <label class="myprofile">My Profile</label>
                            </a>
                            <a class="dropdown-item" href="#">
-                           <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                           Billing
+                           <img src="images/billing.png" class="img-fluid" alt="billing">
+                           <label class="billing">Billing</label>
                            </a>
                            <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
-                           <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                           Logout
+                           <img src="images/logout.png" class="img-fluid" alt="logout">
+                           <label class="logout">Logout</label>
                            </a>
                         </div>
                      </li>
@@ -150,7 +154,7 @@
                   <div class="row">
                      <div class="col-xl-8 col-lg-7 ordered-two-sm">
                         <div class="row">
-                           <div class="col-lg-6">
+                           <div class="col-xl-6">
                               <div class="card mb-4">
                                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 text-dark stats">Statistics</h6>
@@ -161,30 +165,29 @@
                                        </a>
                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                                           aria-labelledby="dropdownMenuLink">
-                                          <div class="dropdown-header">Select Periode</div>
-                                          <a class="dropdown-item" href="#">Today</a>
-                                          <a class="dropdown-item" href="#">Week</a>
-                                          <a class="dropdown-item active" href="#">Month</a>
-                                          <a class="dropdown-item" href="#">This Year</a>
+                                          <div class="dropdown-header">Select Periods</div>
+                                          <a class="dropdown-item" href="#">1 day</a>
+                                          <a class="dropdown-item" href="#">3 weeks</a>
+                                          <a class="dropdown-item active" href="#">6 months</a>
+                                          <a class="dropdown-item" href="#">2 years</a>
                                        </div>
                                     </div>
                                  </div>
                                  <div class="card-body">
                                     <div class="chart-area">
-                                       <canvas id="myAreaChart"></canvas>
+                                       <div id="area-chart"></div>
                                     </div>
                                  </div>
                               </div>
                            </div>
-                           <div class="col-lg-6">
+                           <div class="col-xl-6">
                               <div class="card mb-4">
                                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 text-dark stats">Sales Distribution</h6>
                                  </div>
                                  <div class="card-body">
                                     <div class="chart-area">
-                                       <div id="chart"></div>
-
+                                       <div id="donut-chart"></div>
                                     </div>
                                  </div>
                               </div>
@@ -276,7 +279,7 @@
                               <div class="chart-area ht-card">
                                  <div class="dropdown-divider"></div>
                                  <h6 class="m-0 text-dark stats">Our Users</h6>
-                                 <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400 float-right more-vert-icon"></i>
+                                 <img src="images/dropdowndots.png" class="float-right more-vert-icon" alt="dropdowndots">
                                  <a class="dropdown-item dropitem-users d-flex align-items-center" href="#">
                                     <div class="mr-3">
                                        <div class="icon-circle">
@@ -316,7 +319,7 @@
                         <div class="card mb-4 ordered-four-sm">
                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                               <h6 class="m-0 font-weight-bold text-dark product-video">Product Video</h6>
-                              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400 float-right"></i>
+                              <img src="images/dropdowndots.png" class="float-right vert-icon" alt="dropdowndots">
                            </div>
                            <div class="card-body">
                               <div class="chart-area">
@@ -355,28 +358,5 @@
       <script src="js/ruang-admin.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
       <script src="js/scripts.js"></script>
-      <script type="text/javascript">
-         // Sales Distribution Donut Chart
-var options = {
-          series: [44, 55, 41, 17, 15],
-          chart: {
-          type: 'donut',
-        },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200
-            },
-            legend: {
-              position: 'bottom'
-            }
-          }
-        }]
-        };
-
-        var chart = new ApexCharts(document.querySelector("#chart"), options);
-        chart.render();
-      </script>
    </body>
 </html>
