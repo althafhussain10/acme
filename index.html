@@ -4,380 +4,392 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>My Portfolio</title>
-      <!-- CSS Files -->
-      <link rel="stylesheet" href="css/style.css"/>
-      <link rel="stylesheet" href="css/skins/color-1.css"/>
-      <!-- Font Awesome CDN-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+      <title>Acme</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/all.min.css">
+      <!-- Google Fonts -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap">
    </head>
    <body>
-      <!-- Main Container Start -->
-      <div class="main-container">
-         <!-- Aside Start -->
-         <div class="aside">
-            <div class="logo">
-               <a href="#"><span>A</span>lthaf</a>
+      <!-- Header Start -->
+      <div id="wrapper">
+         <!-- Sidebar -->
+         <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-left" href="index.html">
+               <div class="sidebar-brand-text text-uppercase">Acme</div>
+            </a>
+            <li class="nav-item">
+               <a class="nav-link" href="index.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="home-icon">
+                     <path d="M20,8h0L14,2.74a3,3,0,0,0-4,0L4,8a3,3,0,0,0-1,2.26V19a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3V10.25A3,3,0,0,0,20,8ZM14,20H10V15a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1Zm5-1a1,1,0,0,1-1,1H16V15a3,3,0,0,0-3-3H11a3,3,0,0,0-3,3v5H6a1,1,0,0,1-1-1V10.25a1,1,0,0,1,.34-.75l6-5.25a1,1,0,0,1,1.32,0l6,5.25a1,1,0,0,1,.34.75Z"/>
+                  </svg>
+                  <span>Home</span>
+               </a>
+            </li>
+            <li class="nav-item active">
+               <a class="nav-link" href="#dashboard">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="dashboard-icon">
+                     <g fill="none" fill-rule="evenodd" stroke="#AAA7FB" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" transform="translate(2 2)">
+                        <line stroke="#AAA7FB" x1="5.371" x2="5.371" y1="8.202" y2="15.062"/>
+                        <line stroke="#AAA7FB" x1="10.038" x2="10.038" y1="4.919" y2="15.062"/>
+                        <line stroke="#AAA7FB" x1="14.629" x2="14.629" y1="11.827" y2="15.062"/>
+                        <path d="M14.6857143,0 L5.31428571,0 C2.04761905,0 0,2.31208373 0,5.58515699 L0,14.414843 C0,17.6879163 2.03809524,20 5.31428571,20 L14.6857143,20 C17.9619048,20 20,17.6879163 20,14.414843 L20,5.58515699 C20,2.31208373 17.9619048,0 14.6857143,0 Z"/>
+                     </g>
+                  </svg>
+                  <span>Dashboard</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#inbox">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="inbox-icon">
+                     <path d="M12,15a1,1,0,0,1-.71-.29l-4-4A1,1,0,0,1,8.71,9.29L12,12.59l3.29-3.29a1,1,0,0,1,1.41,1.41l-4,4A1,1,0,0,1,12,15Z"/>
+                  </svg>
+                  <span>Inbox</span>
+                  <span class="badge badge-danger float-right badgeNew">New</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#products">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="product-icon">
+                     <g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" transform="translate(3 2)">
+                        <line stroke="#fff" x1="12.716" x2="5.496" y1="14.223" y2="14.223"/>
+                        <line stroke="#fff" x1="12.716" x2="5.496" y1="10.037" y2="10.037"/>
+                        <line stroke="#fff" x1="8.251" x2="5.496" y1="5.86" y2="5.86"/>
+                        <path d="M12.9086,0.7498 C12.9086,0.7498 5.2316,0.7538 5.2196,0.7538 C2.4596,0.7708 0.7506,2.5868 0.7506,5.3568 L0.7506,14.5528 C0.7506,17.3368 2.4726,19.1598 5.2566,19.1598 C5.2566,19.1598 12.9326,19.1568 12.9456,19.1568 C15.7056,19.1398 17.4156,17.3228 17.4156,14.5528 L17.4156,5.3568 C17.4156,2.5728 15.6926,0.7498 12.9086,0.7498 Z"/>
+                     </g>
+                  </svg>
+                  <span>Products</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#admin">
+                  <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" id="admin-icon">
+                     <path d="M19.9,12.66a1,1,0,0,1,0-1.32L21.18,9.9a1,1,0,0,0,.12-1.17l-2-3.46a1,1,0,0,0-1.07-.48l-1.88.38a1,1,0,0,1-1.15-.66l-.61-1.83A1,1,0,0,0,13.64,2h-4a1,1,0,0,0-1,.68L8.08,4.51a1,1,0,0,1-1.15.66L5,4.79A1,1,0,0,0,4,5.27L2,8.73A1,1,0,0,0,2.1,9.9l1.27,1.44a1,1,0,0,1,0,1.32L2.1,14.1A1,1,0,0,0,2,15.27l2,3.46a1,1,0,0,0,1.07.48l1.88-.38a1,1,0,0,1,1.15.66l.61,1.83a1,1,0,0,0,1,.68h4a1,1,0,0,0,.95-.68l.61-1.83a1,1,0,0,1,1.15-.66l1.88.38a1,1,0,0,0,1.07-.48l2-3.46a1,1,0,0,0-.12-1.17ZM18.41,14l.8.9-1.28,2.22-1.18-.24a3,3,0,0,0-3.45,2L12.92,20H10.36L10,18.86a3,3,0,0,0-3.45-2l-1.18.24L4.07,14.89l.8-.9a3,3,0,0,0,0-4l-.8-.9L5.35,6.89l1.18.24a3,3,0,0,0,3.45-2L10.36,4h2.56l.38,1.14a3,3,0,0,0,3.45,2l1.18-.24,1.28,2.22-.8.9A3,3,0,0,0,18.41,14ZM11.64,8a4,4,0,1,0,4,4A4,4,0,0,0,11.64,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,11.64,14Z"/>
+                  </svg>
+                  <span>Admin</span>
+               </a>
+            </li>
+         </ul>
+         <!-- Sidebar -->
+         <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+               <!-- TopBar -->
+               <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+                  <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                  <i class="fa fa-align-left text-secondary"></i>
+                  </button>
+                  <ul class="navbar-nav mr-auto sm-search">
+                     <li class="nav-item dropdown no-arrow">
+                        <form class="navbar-search">
+                           <div class="input-group">
+                              <div class="input-group-append">
+                                 <button class="btn btn-primary search-btn" type="button">
+                                 <img src="images/search.png" alt="search" class="img-fluid">
+                                 </button>
+                              </div>
+                              <input type="text" class="form-control bg-light border-0 small" placeholder="Search transactions, invoices or help"
+                                 aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
+                           </div>
+                        </form>
+                     </li>
+                  </ul>
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                        <img src="images/bell.png" class="img-fluid" alt="bell" id="bell">
+                        <span class="circle">
+                        <i class="fa fa-circle" aria-hidden="true"></i>
+                        </span>
+                        </a>
+                        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                           aria-labelledby="alertsDropdown">
+                           <a class="dropdown-item d-flex align-items-center" href="#">
+                              <div class="mr-3">
+                                 <div class="icon-circle">
+                                    <img src="images/profile-pic-02.jpg" class="img-fluid rounded-circle" alt="profile-pic-02">
+                                 </div>
+                              </div>
+                              <div>
+                                 <div class="small text-gray-500">Bavid Kames
+                                    <span class="lead country-name notic">2 min ago</span>
+                                 </div>
+                                 <span class="lead notic-para">Assigned you on the call with Sara</span>
+                              </div>
+                           </a>
+                           <a class="dropdown-item d-flex align-items-center" href="#">
+                              <div class="mr-3">
+                                 <div class="icon-circle">
+                                    <img src="images/profile-pic-06.jpg" class="img-fluid rounded-circle" alt="profile-pic-03">
+                                 </div>
+                              </div>
+                              <div>
+                                 <div class="small text-gray-500">Alexa Marry
+                                    <span class="lead country-name notic">5 min ago</span>
+                                 </div>
+                                 <span class="lead notic-para">Marked the task <span class="show-more-notic font-weight-bold">New UI</span> as done</span>
+                              </div>
+                           </a>
+                           <a class="dropdown-item d-flex align-items-center" href="#">
+                              <div class="mr-3">
+                                 <div class="icon-circle">
+                                    <img src="images/profile-pic-05.jpg" class="img-fluid rounded-circle" alt="profile-pic-04">
+                                 </div>
+                              </div>
+                              <div>
+                                 <div class="small text-gray-500">Eva Maria
+                                    <span class="lead country-name notic">10 min ago</span>
+                                 </div>
+                                 <span class="lead notic-para">Added a new comment on Sales task</span>
+                              </div>
+                           </a>
+                           <a class="dropdown-item text-center show-more-notic" href="#">Show More</a>
+                        </div>
+                     </li>
+                     <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                        <span class="d-none d-lg-inline text-secondary small profileUpdate">John Doe</span>
+                        <img src="images/arrowicon.png" class="img-fluid arrow-icon" alt="arrowicon">
+                        <img class="img-profile rounded-circle" src="images/profile-pic-01.jpg" style="max-width: 60px">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                           <a class="dropdown-item" href="#">
+                           <img src="images/myprofile.png" class="img-fluid" alt="myprofile">
+                           <label class="myprofile">My Profile</label>
+                           </a>
+                           <a class="dropdown-item" href="#">
+                           <img src="images/billing.png" class="img-fluid" alt="billing">
+                           <label class="billing">Billing</label>
+                           </a>
+                           <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
+                           <img src="images/logout.png" class="img-fluid" alt="logout">
+                           <label class="logout">Logout</label>
+                           </a>
+                        </div>
+                     </li>
+                  </ul>
+               </nav>
+               <!-- Topbar -->
+               <!-- Container Fluid-->
+               <div class="container-fluid" id="container-wrapper">
+                  <div class="d-flex align-items-center justify-content-between mb-4">
+                     <h1 class="h3 mb-0 text-gray-800">Overview</h1>
+                     <button type="button" class="btn btn-primary fundsBtn">Add Funds <i class="fa fa-plus"></i></button>
+                  </div>
+                  <div class="row">
+                     <div class="col-xl-8 col-lg-7 ordered-two-sm">
+                        <div class="row">
+                           <div class="col-xl-6">
+                              <div class="card mb-4">
+                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 text-dark stats">Statistics</h6>
+                                    <div class="dropdown no-arrow">
+                                       <a class="dropdown-toggle btn btn-primary select-stats btn-sm" href="#" role="button" id="dropdownMenuLink"
+                                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                       6 months <i class="fas fa-chevron-down"></i>
+                                       </a>
+                                       <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                          aria-labelledby="dropdownMenuLink">
+                                          <div class="dropdown-header">Select Periods</div>
+                                          <a class="dropdown-item" href="#">1 day</a>
+                                          <a class="dropdown-item" href="#">3 weeks</a>
+                                          <a class="dropdown-item active" href="#">6 months</a>
+                                          <a class="dropdown-item" href="#">2 years</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="card-body">
+                                    <div class="chart-area">
+                                       <div id="area-chart"></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-xl-6">
+                              <div class="card mb-4">
+                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 text-dark stats">Sales Distribution</h6>
+                                 </div>
+                                 <div class="card-body">
+                                    <div class="chart-area">
+                                       <div id="donut-chart"></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-lg-12">
+                              <div class="card">
+                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 text-dark referrer">Referrer</h6>
+                                 </div>
+                                 <div class="table-responsive">
+                                    <table class="table align-items-center table-flush">
+                                       <thead class="thead-light">
+                                          <tr>
+                                             <th>Location</th>
+                                             <th>Views</th>
+                                             <th>Sales</th>
+                                             <th>Conversion</th>
+                                             <th>Total</th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <tr>
+                                             <td>google.com</td>
+                                             <td>3746</td>
+                                             <td>752</td>
+                                             <td>43%</td>
+                                             <td>$19,291</td>
+                                          </tr>
+                                          <tr>
+                                             <td>facebook.com</td>
+                                             <td>8126</td>
+                                             <td>728</td>
+                                             <td>32%</td>
+                                             <td>$17,638</td>
+                                          </tr>
+                                          <tr>
+                                             <td>twitter.com</td>
+                                             <td>8836</td>
+                                             <td>694</td>
+                                             <td>28%</td>
+                                             <td>$16,218</td>
+                                          </tr>
+                                          <tr>
+                                             <td>Direct, email, IM</td>
+                                             <td>1173</td>
+                                             <td>645</td>
+                                             <td>24%</td>
+                                             <td>$14,421</td>
+                                          </tr>
+                                          <tr>
+                                             <td>linkedin.com</td>
+                                             <td>2739</td>
+                                             <td>539</td>
+                                             <td>20%</td>
+                                             <td>$12,370</td>
+                                          </tr>
+                                          <tr>
+                                             <td>instagram.com</td>
+                                             <td>2739</td>
+                                             <td>539</td>
+                                             <td>20%</td>
+                                             <td>$12,370</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="card-footer">
+                                    <a href="#show" class="link-primary show-more">Show More</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-lg-5">
+                        <div class="card mb-4 ordered-one-sm">
+                           <div class="card-header py-3 d-flex flex-row align-items-center justify-content-center">
+                              <figure>
+                                 <img src="images/profile-pic-01.jpg" class="img-fluid rounded-circle profileImage mx-auto mt-3"  alt="profile-image">
+                                 <h6 class="text-center profile-name mt-3">Nick Herasimenka</h6>
+                                 <p class="lead text-center country-name mt-1">United States</p>
+                                 <div class="social-icons">
+                                    <img src="images/twitter.png" alt="twitter" class="img-fluid">
+                                    <img src="images/facebook.png" alt="facebook" class="img-fluid">
+                                    <img src="images/linkedIn.png" alt="linkedIn" class="img-fluid">
+                                    <img src="images/whatsapp.png" alt="whatsapp" class="img-fluid">
+                                 </div>
+                              </figure>
+                           </div>
+                           <div class="card-body mt_30">
+                              <div class="chart-area ht-card">
+                                 <div class="dropdown-divider"></div>
+                                 <h6 class="m-0 text-dark stats">Our Users</h6>
+                                 <img src="images/dropdowndots.png" class="float-right more-vert-icon" alt="dropdowndots">
+                                 <a class="dropdown-item dropitem-users d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                       <div class="icon-circle">
+                                          <img src="images/profile-pic-02.jpg" class="img-fluid rounded-circle" alt="profile-pic-02">
+                                       </div>
+                                    </div>
+                                    <div>
+                                       <div class="small text-gray-500">Drew James</div>
+                                       <span class="lead country-name">United States</span>
+                                       <span class="lead mobile-number mbl">Mobile : 8715674877</span>
+                                    </div>
+                                 </a>
+                                 <a class="dropdown-item dropitem-users d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                       <div class="icon-circle">
+                                          <img src="images/profile-pic-03.jpg" class="img-fluid rounded-circle" alt="profile-pic-03">
+                                       </div>
+                                    </div>
+                                    <div>
+                                       <div class="small text-gray-500">Bavid Kames</div>
+                                       <span class="lead country-name">United States</span>
+                                       <span class="lead mobile-number mbl">Mobile : 8715674877</span>
+                                    </div>
+                                 </a>
+                                 <a class="dropdown-item dropitem-users d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                       <div class="icon-circle">
+                                          <img src="images/profile-pic-04.jpg" class="img-fluid rounded-circle" alt="profile-pic-04">
+                                       </div>
+                                    </div>
+                                    <div>
+                                       <div class="small text-gray-500">Lavid Emes</div>
+                                       <span class="lead country-name">United States</span>
+                                       <span class="lead mobile-number mbl">Mobile : 8715674877</span>
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card mb-4 ordered-four-sm">
+                           <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                              <h6 class="m-0 font-weight-bold text-dark product-video">Product Video</h6>
+                              <img src="images/dropdowndots.png" class="float-right vert-icon" alt="dropdowndots">
+                           </div>
+                           <div class="card-body">
+                              <div class="chart-area">
+                                 <div class="wrap">
+                                    <div class="box-video">
+                                       <div
+                                          class="bg-video"
+                                          style="background-image: url(images/video_thumbnail.png);">
+                                          <div class="bt-play"></div>
+                                       </div>
+                                       <div class="video-container">
+                                          <iframe
+                                             width="560"
+                                             height="315"
+                                             src="https://www.youtube.com/embed/Oy6hk6Y7VHQ"
+                                             title="YouTube video player"
+                                             frameborder="0"
+                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                             allowfullscreen="allowfullscreen"></iframe>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!---Container Fluid-->
             </div>
-            <div class="nav-toggler">
-               <span></span>
-            </div>
-            <ul class="nav">
-               <li><a href="#" class="active"><i class="fa fa-home"></i> Home</a></li>
-               <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
-               <li><a href="#services"><i class="fa fa-list"></i> Services</a></li>
-               <li><a href="#"><i class="fa fa-briefcase"></i> Portfolio</a></li>
-               <li><a href="#"><i class="fa fa-comments"></i> Contact</a></li>
-            </ul>
          </div>
-         <!-- Aside End -->
-         <!-- Main Content Start -->
-         <div class="main-content">
-            <!-- Home Section Start -->
-            <section class="home section">
-               <div class="container">
-                  <div class="row">
-                     <div class="home-info padd-15">
-                        <h3 class="hello">Hello, my name is <span class="name">Mohamed Althaf Hussain N</span></h3>
-                        <h3 class="my-profession">I'm a <span class="typing">Senior UI/UX Developer</span></h3>
-                        <p>I'm a UI/UX Developer with extensive experience for over 4 years.My expertise is to create responsive website designs,poster cards,banner designs, and many more...</p>
-                        <a href="#contact" class="btn hire-me">Hire Me</a>
-                     </div>
-                     <div class="home-img padd-15">
-                        <img src="images/hero.jpg" alt="hero-image" class="img-fluid">
-                     </div>
-                  </div>
-               </div>
-            </section>
-            <!-- Home Section End -->
-            <!-- About Section Start -->
-            <section class="about section" id="about">
-               <div class="container">
-                  <div class="row">
-                     <div class="section-title padd-15">
-                        <h2>About Me</h2>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="about-content padd-15">
-                        <div class="row">
-                           <div class="about-text padd-15">
-                              <h3>I'm Mohamed Althaf Hussain N and <span>Senior UI/UX Developer</span></h3>
-                              <p>Highly-skilled and motivated senior software engineer with 4 years of experience, seeking a challenging position which will enable me to utilize my extensive skills, continue my professional development and provide opportunity for growth and advancement.</p>
-                           </div>
-                        </div>
-                        <!-- Personal Info & Skills Start-->
-                        <div class="row">
-                           <div class="personal-info padd-15">
-                              <div class="row">
-                                 <div class="info-item padd-15">
-                                    <p>Birthday : <span>10 May 1994</span></p>
-                                 </div>
-                                 <div class="info-item padd-15">
-                                    <p>Age : <span>28</span></p>
-                                 </div>
-                                 <div class="info-item padd-15">
-                                    <p>Website : <span>althaf-portfolio.netlify.app</span></p>
-                                 </div>
-                                 <div class="info-item padd-15">
-                                    <p>Email : <span>althafhussain10@gmail.com</span></p>
-                                 </div>
-                                 <div class="info-item padd-15">
-                                    <p>Degree : <span>B.E.E&I</span></p>
-                                 </div>
-                                 <div class="info-item padd-15">
-                                    <p>Phone : <span>8015340375</span></p>
-                                 </div>
-                                 <div class="info-item padd-15">
-                                    <p>City : <span>Chennai</span></p>
-                                 </div>
-                                 <div class="info-item padd-15">
-                                    <p>Freelance : <span>Available</span></p>
-                                 </div>
-                              </div>
-                              <div class="row">
-                                 <div class="buttons padd-15">
-                                    <a href="#" class="btn">Download CV</a>
-                                    <a href="#contact" class="btn hire-me">Hire Me</a>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="skills padd-15">
-                              <div class="row">
-                                 <div class="skill-item padd-15">
-                                    <h5>HTML</h5>
-                                    <div class="progress">
-                                       <div class="progress-in" style="width: 100%;"></div>
-                                       <div class="skill-percent">100%</div>
-                                    </div>
-                                 </div>
-                                 <div class="skill-item padd-15">
-                                    <h5>CSS</h5>
-                                    <div class="progress">
-                                       <div class="progress-in" style="width: 100%;"></div>
-                                       <div class="skill-percent">100%</div>
-                                    </div>
-                                 </div>
-                                 <div class="skill-item padd-15">
-                                    <h5>Javascript</h5>
-                                    <div class="progress">
-                                       <div class="progress-in" style="width: 85%;"></div>
-                                       <div class="skill-percent">85%</div>
-                                    </div>
-                                 </div>
-                                 <div class="skill-item padd-15">
-                                    <h5>jQuery</h5>
-                                    <div class="progress">
-                                       <div class="progress-in" style="width: 90%;"></div>
-                                       <div class="skill-percent">90%</div>
-                                    </div>
-                                 </div>
-                                 <div class="skill-item padd-15">
-                                    <h5>BOOTSTRAP 3,4,5</h5>
-                                    <div class="progress">
-                                       <div class="progress-in" style="width: 100%;"></div>
-                                       <div class="skill-percent">100%</div>
-                                    </div>
-                                 </div>
-                                 <div class="skill-item padd-15">
-                                    <h5>Angular 9,10,11,12</h5>
-                                    <div class="progress">
-                                       <div class="progress-in" style="width: 80%;"></div>
-                                       <div class="skill-percent">80%</div>
-                                    </div>
-                                 </div>
-                                 <div class="skill-item padd-15">
-                                    <h5>React</h5>
-                                    <div class="progress">
-                                       <div class="progress-in" style="width: 90%;"></div>
-                                       <div class="skill-percent">90%</div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- Personal Info & Skills End-->
-                        <!-- Education -->
-                        <div class="row">
-                           <div class="education padd-15">
-                              <h3 class="title">Education</h3>
-                              <div class="row">
-                                 <div class="timeline-box padd-15">
-                                    <div class="timeline shadow-dark">
-                                       <!-- Timeline Item Start -->
-                                       <div class="timeline-item">
-                                          <div class="circle-dot"></div>
-                                          <h5 class="timeline-date">
-                                             <i class="fa fa-calendar"></i> 2009 - 2010
-                                          </h5>
-                                          <h3 class="timeline-role">L.K.Higher Secondary School</h3>
-                                          <h4 class="timeline-title">S.S.L.C</h4>
-                                          <p class="timeline-text">
-                                             Completed S.S.LC with 94%.
-                                          </p>
-                                       </div>
-                                       <div class="timeline-item">
-                                          <div class="circle-dot"></div>
-                                          <h5 class="timeline-date">
-                                             <i class="fa fa-calendar"></i> 2011 - 2012
-                                          </h5>
-                                          <h3 class="timeline-role">L.K.Higher Secondary School</h3>
-                                          <h4 class="timeline-title">H.S.C</h4>
-                                          <p class="timeline-text">
-                                             Completed H.S.C with 89%.
-                                          </p>
-                                       </div>
-                                       <div class="timeline-item">
-                                          <div class="circle-dot"></div>
-                                          <h5 class="timeline-date">
-                                             <i class="fa fa-calendar"></i> 2012 - 2016
-                                          </h5>
-                                          <h3 class="timeline-role">Velammal Engineering College</h3>
-                                          <h4 class="timeline-title">B.E.E&I</h4>
-                                          <p class="timeline-text">
-                                             Completed B.E.Electronics & Instrumentation Enginerring with 7.43 CGPA.
-                                          </p>
-                                       </div>
-                                       <!-- Timeline Item End -->
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="experience padd-15">
-                              <h3 class="title">Experience</h3>
-                              <div class="row">
-                                 <div class="timeline-box padd-15">
-                                    <div class="timeline shadow-dark">
-                                       <!-- Timeline Item Start -->
-                                       <div class="timeline-item">
-                                          <div class="circle-dot"></div>
-                                          <h5 class="timeline-date">
-                                             <i class="fa fa-calendar"></i> Oct 2020 -  Apr 2022
-                                          </h5>
-                                          <h3 class="timeline-role">Fujisakura Technologies Private Limited</h3>
-                                          <h4 class="timeline-title">Senior Software Engineer</h4>
-                                          <p class="timeline-text">
-                                             Worked with Real Time Project Ranabase using Html,Css,Js,Php(Laravel),MySQL in Oct 2020-Apr 2022.Worked with Fujisakura Pamphlet Design on Dec 2020.Worked with Fujisakura Website using Html,Css,Js,Bootstrap4,Angular10,Php(Laravel),MySQL in Oct 2020-Dec 2020.Worked with Infra Project Website using Angular 11 & Laravel in Dec 2020 - Feb 2021.Worked with Infrastructure Development  Website using React & Python in Mar 2021 - Oct 2021.Worked with HRMS Website using Html,Css,Js,Bootstrap5,Php(Laravel),Angular12, MySQL in Oct 2021 - Apr 2022.Worked with New Year Greetings Card Design in Dec 2021.Worked with Pongal Greetings Card Design in Jan 2022.
-                                          </p>
-                                       </div>
-                                       <div class="timeline-item">
-                                          <div class="circle-dot"></div>
-                                          <h5 class="timeline-date">
-                                             <i class="fa fa-calendar"></i> Jun 2019 - Sep 2020
-                                          </h5>
-                                          <h3 class="timeline-role">NOHITATU Technologies PVT Limited
-                                             <span>(Freelancer)</span>
-                                          </h3>
-                                          <h4 class="timeline-title">UI/UX Developer</h4>
-                                          <p class="timeline-text">
-                                             Worked with Dojoman using Angular 8, Bootstrap 4 in Oct 2019 - Nov 2019.Worked with ECC using Angular 9, Bootstrap 4 in Dec 2019 - Feb 2020.Worked with Sitthidresses using Wordpress in Mar 2020 - May 2020.
-                                          </p>
-                                       </div>
-                                       <div class="timeline-item">
-                                          <div class="circle-dot"></div>
-                                          <h5 class="timeline-date">
-                                             <i class="fa fa-calendar"></i> Mar 2019 - May 2019
-                                          </h5>
-                                          <h3 class="timeline-role">iGENUINE SOFT SOLUTIONS
-                                             <span>(Internship)</span>
-                                          </h3>
-                                          <h4 class="timeline-title">Web Developer</h4>
-                                          <p class="timeline-text">
-                                             Worked with Real Time Projects in 3 months.
-                                          </p>
-                                       </div>
-                                       <div class="timeline-item">
-                                          <div class="circle-dot"></div>
-                                          <h5 class="timeline-date">
-                                             <i class="fa fa-calendar"></i> May 2018 - Aug 2018
-                                          </h5>
-                                          <h3 class="timeline-role">WEBSITICA TECHNOLOGIES
-                                             <span>(Internship)</span>
-                                          </h3>
-                                          <h4 class="timeline-title">Web Developer</h4>
-                                          <p class="timeline-text">
-                                             Worked with Real Time Projects in 3 months.
-                                          </p>
-                                       </div>
-                                       <div class="timeline-item">
-                                          <div class="circle-dot"></div>
-                                          <h5 class="timeline-date">
-                                             <i class="fa fa-calendar"></i> Feb 2018 - Mar 2018
-                                          </h5>
-                                          <h3 class="timeline-role">ZUAN EDUCATION
-                                             <span>(WEB DESIGN COURSE)</span>
-                                          </h3>
-                                          <h4 class="timeline-title">Web Designer</h4>
-                                          <p class="timeline-text">
-                                             Learned with Real Time Crash Course in 2 months Iike Abdul kalam web page,Islam web page.
-                                          </p>
-                                       </div>
-                                       <div class="timeline-item">
-                                          <div class="circle-dot"></div>
-                                          <h5 class="timeline-date">
-                                             <i class="fa fa-calendar"></i> Sep 2017 - Feb  2018
-                                          </h5>
-                                          <h3 class="timeline-role">
-                                          INFOSEARCH BPO PVT LIMITED
-                                          <h4 class="timeline-title">Image Detective</h4>
-                                          <p class="timeline-text">
-                                             Worked with images search & stored in the client website.
-                                          </p>
-                                       </div>
-                                       <!-- Timeline Item End -->
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- Education -->
-                     </div>
-                  </div>
-               </div>
-            </section>
-            <!-- About Section End -->
-            <!-- Services Section Start -->
-            <section class="service section" id="services">
-               <div class="container">
-                  <div class="row">
-                     <div class="section-title padd-15">
-                        <h2>Services</h2>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <!-- Service Item Start -->
-                     <div class="service-item padd-15">
-                        <div class="service-item-inner">
-                           <div class="icon">
-                              <i class="fa fa-mobile"></i>
-                           </div>
-                           <h4>Web Design</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                     </div>
-                     <!-- Service Item End -->
-                     <!-- Service Item Start -->
-                     <div class="service-item padd-15">
-                        <div class="service-item-inner">
-                           <div class="icon">
-                              <i class="fa fa-laptop"></i>
-                           </div>
-                           <h4>Responsive Web Design</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                     </div>
-                     <!-- Service Item End -->
-                     <!-- Service Item Start -->
-                     <div class="service-item padd-15">
-                        <div class="service-item-inner">
-                           <div class="icon">
-                              <i class="fa fa-code"></i>
-                           </div>
-                           <h4>Web Development</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                     </div>
-                     <!-- Service Item End -->
-                     <!-- Service Item Start -->
-                     <div class="service-item padd-15">
-                        <div class="service-item-inner">
-                           <div class="icon">
-                              <i class="fa fa-palette"></i>
-                           </div>
-                           <h4>Banner Designs</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                     </div>
-                     <!-- Service Item End -->
-                     <!-- Service Item Start -->
-                     <div class="service-item padd-15">
-                        <div class="service-item-inner">
-                           <div class="icon">
-                              <i class="fa fa-ranking-star"></i>
-                           </div>
-                           <h4>Performance</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                     </div>
-                     <!-- Service Item End -->
-                     <!-- Service Item Start -->
-                     <div class="service-item padd-15">
-                        <div class="service-item-inner">
-                           <div class="icon">
-                              <i class="fa fa-award"></i>
-                           </div>
-                           <h4>Quality</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                     </div>
-                     <!-- Service Item End -->
-                  </div>
-               </div>
-         </div>
-         <!-- Main Content End -->
       </div>
-      <!-- Main Container End -->
-      <!-- JS Files -->
-      <script src="js/script.js"></script>
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.bundle.js"></script>
+      <script src="js/jquery.easing.min.js"></script>
+      <script src="js/jquery-fn.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+      <script src="js/scripts.js"></script>
    </body>
 </html>
